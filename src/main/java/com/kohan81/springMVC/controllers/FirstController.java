@@ -1,9 +1,11 @@
-package com.kohan81.springMVC.config.controllers;
+package com.kohan81.springMVC.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+@RequestMapping("/first")
 public class FirstController {
 
     @GetMapping("/hello")
@@ -18,6 +20,6 @@ public class FirstController {
 
     @GetMapping("/")
     public String startPage(){
-        return "first/start";
+        return "/start";
     }
 }
